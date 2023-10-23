@@ -1,0 +1,16 @@
+#include<stdio.h>
+#include<math.h>
+#include<stdlib.h>
+
+int main(){
+    double totalGb,days,usedGb,daysRemaining,dailyUsed,dataExceeding,remainingGb,datalimit;
+    printf("%lf",&totaGb);
+    scanf("%lf",&totalGb);
+    printf("Enter the current day from 30 days period:");
+    scanf("%lf,&days");
+    printf("Enter how much Gbyou used so far:");
+    scanf("lf",&usedGb);
+    remainingGb=30-days;
+    datalimit=remainingGb/daysRemaining;
+    dailyUsed=usedGb/days;
+    
