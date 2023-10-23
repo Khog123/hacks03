@@ -13,4 +13,29 @@ int main(){
     remainingGb=30-days;
     datalimit=remainingGb/daysRemaining;
     dailyUsed=usedGb/days;
-    
+
+   if (datalimit==0){
+    printf("%lg days used, %lg days remaining\n",days,daysRemaining);
+       printf("Average daily used:%lgGb/day\n",dailyUsed);
+       printf("You already met your limit this month. look like you getting some average charges...\n");
+   }
+   else if(usedGb!=0){
+     dataExceeding=daysRemaining*dailyUsed;
+     dataLimite=remainingGb/daysRemaining;
+     printf("%lg days used, %lg Days remaining\n",days,daysRemaining);
+     printf("Average daily Used: %lg GB/day\n",dailyUsed);
+     printf("if you use this Data on %lgGB/day you exceeding data to %lgGB\n",dailyUsed,dataExceeding);
+     printf("Used Data not more than %lgGb/day to reached your data plan for Month\n",dataLimite);
+     }
+     else if(usedGb==0){
+        double averageUsed=totalGb/30;
+        remainingGb=averageUsed+totalGb;
+        double averageGb=remainingGb/daysRemaining;
+        printf("%lgday used, %lg days remaining\nAverage Daily used:%lg\n",days,daysRemaining,dailyUsed);
+        printf("You are below from your average %lgGB/day usage\nknow you can exceed your average used to %lgGb/day usage\n",averageUsed,averageGb);
+
+    }
+        
+    return 0;
+
+}
